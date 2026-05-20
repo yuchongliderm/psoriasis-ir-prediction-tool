@@ -206,7 +206,6 @@ if submitted:
             base_value = base_value[1] if np.ndim(base_value) > 0 else float(base_value)
         base_value = float(np.asarray(base_value))
 
-    shap.initjs()
     force = shap.force_plot(
         base_value=base_value,
         shap_values=shap_values[0],
