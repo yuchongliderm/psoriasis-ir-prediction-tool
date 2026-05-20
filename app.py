@@ -10,7 +10,7 @@ import streamlit.components.v1 as components
 # =========================================================
 # 1. load web artifacts
 # =========================================================
-WEB_DIR = "model_outputs_revised_v3/web_artifacts"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 with open(os.path.join(WEB_DIR, "final_pipeline.pkl"), "rb") as f:
     final_pipeline = pickle.load(f)
