@@ -12,11 +12,13 @@ import streamlit.components.v1 as components
 # =========================================================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open(os.path.join(WEB_DIR, "final_pipeline.pkl"), "rb") as f:
+with open(os.path.join(BASE_DIR, "final_pipeline.pkl"), "rb") as f:
     final_pipeline = pickle.load(f)
 
-with open(os.path.join(WEB_DIR, "model_meta.json"), "r", encoding="utf-8") as f:
+with open(os.path.join(BASE_DIR, "model_meta.json"), "r", encoding="utf-8") as f:
     meta = json.load(f)
+
+shap_background = pd.read_csv(os.path.join(BASE_DIR, "shap_background.csv"))
 
 X_bg = pd.read_csv(os.path.join(WEB_DIR, "shap_background.csv"))
 
