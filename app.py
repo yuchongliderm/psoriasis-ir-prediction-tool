@@ -99,7 +99,6 @@ with st.form("prediction_form", clear_on_submit=False):
     sex = 0 if sex_label == "Female" else 1
     bmi = st.number_input("BMI", min_value=10.0, max_value=60.0, value=24.0, step=0.1)
     pasi = st.number_input("PASI", min_value=0.0, max_value=72.0, value=8.0, step=0.1)
-    duration = st.number_input("Disease duration (years)", min_value=0.0, max_value=80.0, value=10.0, step=0.1)
     hdl = st.number_input("HDL", min_value=0.1, max_value=5.0, value=1.2, step=0.01)
     ldl = st.number_input("LDL", min_value=0.1, max_value=10.0, value=2.8, step=0.01)
 
@@ -114,7 +113,6 @@ if submitted:
     "sex": int(sex),
     "bmi": float(bmi),
     "pasi": float(pasi),
-    "duration": float(duration),
     "hdl": float(hdl),
     "ldl": float(ldl),
     }])
