@@ -10,6 +10,8 @@ import streamlit.components.v1 as components
 # =========================================================
 # 1. load web artifacts
 # =========================================================
+WEB_DIR = os.path.dirname(os.path.abspath(__file__))
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 with open(os.path.join(BASE_DIR, "final_pipeline.pkl"), "rb") as f:
